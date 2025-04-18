@@ -16,7 +16,7 @@ header{
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.932);
+    background-color: #191e4988;
     height: 80px;
 }
 #ContentHeader {
@@ -47,11 +47,13 @@ nav a:hover{
     color: rgb(121, 118, 118)
 }
 #TesteGratuito {
-    background-color: white;
-    border-radius: 50px;
-    color: black;
+    cursor: pointer;
+    margin-top: -1px;
+    background-color: #191E49;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
     text-align: center;
-    width: 180px;
+    width: 200px;
     font-weight: 600;
 }#TesteGratuito:hover{
     opacity: 50%;
@@ -78,18 +80,18 @@ nav a:hover{
     }
 }
 #Primari {
-    background: linear-gradient(to bottom, #353332da, #eeeeee);
+    background: linear-gradient(to bottom, #35333275, #eeeeee69);
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
 }
 #TxtPrimari{
-    width: 40%;
+    width: 30%;
     margin-left: 10%;
     margin-top: 20px;
 }#TxtPrimari p {
-    margin-top: 100px;
+    margin-top: 200px;
     font-size: 14px;
     color: #191E49;
     font-family: monospace;
@@ -99,15 +101,16 @@ nav a:hover{
     color: #191E49;
     font-family: sans-serif;
 }#TxtPrimari #p2 {
+    margin-top: 20px;
     font-size: 22px;
     color: #191E49;
     font-family: sans-serif;
     margin-bottom: 50px;
 }#TxtPrimari #p3 {
-    background-color: black;
-    border-radius: 30px;
+    background-color: #191E49;
+    border-radius: 10px;
     width: 250px;
-    height: 50px;
+    height: 55px;
     color: white;
     font-size: 20px;
     font-weight: 600;
@@ -115,11 +118,10 @@ nav a:hover{
     opacity: 50%;
 }
 #ImgPrimari{
-    margin-top: 20px;
-    width: 40%;
+    width: 50%;
 }#ImgPrimari img {
-    margin-top: 90px;
-    width: 120%;
+    margin-top: 180px;
+    width: 100%;
 }
 @media(max-width: 800px){
     #Primari {
