@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     border: 0;
@@ -25,8 +27,10 @@ header{
     display: flex;
     flex-direction: row;
 }
-#ImgHeader{
-    height: 80px;
+#ContentHeader #ImgHeader{
+    font-size: 55px;
+    margin-left: 100px;
+   color: hsl(0, 0%, 100%); 
 }
 nav {
     display: flex;
@@ -37,6 +41,7 @@ nav {
     margin-left: 100px;
 }
 nav a {
+    font-family: "Montserrat";
     padding-top: 7px;
     font-size: 25px;
     font-weight: 500;
@@ -44,45 +49,24 @@ nav a {
     color: white;
 }
 nav a:hover{
-    color: rgb(121, 118, 118)
+    color: #191E49;
 }
 #TesteGratuito {
     cursor: pointer;
-    margin-top: -1px;
     background-color: #191E49;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
     width: 200px;
-    font-weight: 600;
+    font-family: "Montserrat";
 }#TesteGratuito:hover{
     opacity: 50%;
 }
-@media(max-width: 600px){
-    #ContentHeader {
-        width: 100%;
-    }
-    nav {
-        margin-left: 0px;
-    }
-    nav a {
-        font-size: 12px;
-    }
-    #TesteGratuito {
-        background-color: white;
-        border-radius: 50px;
-        color: black;
-        text-align: center;
-        width: 100px;
-        height: 30px;
-        font-weight: 900;
-        font-size: 18;
-    }
-}
+
 #Primari {
     background: linear-gradient(to bottom, #35333275, #eeeeee69);
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
 }
@@ -120,10 +104,40 @@ nav a:hover{
 #ImgPrimari{
     width: 50%;
 }#ImgPrimari img {
-    margin-top: 180px;
-    width: 100%;
+    margin-top: 250px;
+    width: 80%;
+    margin-left: 10%;
 }
+
 @media(max-width: 800px){
+    header{
+        height: 80px;
+    }
+    #ContentHeader {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #ContentHeader #ImgHeader{
+        font-size: 30px;
+        margin-left: 5px;
+       color: white; 
+       display: none;
+    }
+    
+    nav {
+        padding: 10px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav a {
+        font-size: 9px;
+    }
+    #TesteGratuito {
+        width: 100px;
+    }
     #Primari {
         display: flex;
         flex-direction: column-reverse;
@@ -132,11 +146,19 @@ nav a:hover{
     #Primari #TxtPrimari {
         width: 80%;
         margin-left: 10%;
-    }#Primari #ImgPrimari {
-        width: 80%;
-        margin-left: 20px;
-    }#TxtPrimari p {
+    } #Primari #TxtPrimari h2 {
+        font-size: 30px;
+    }
+    #TxtPrimari p {
         margin-top: 50px;
+    }
+    #Primari #ImgPrimari {
+        width: 80%;
+        margin-left: 10%;
+    } #Primari #ImgPrimari img {
+        margin-top: 180px;
+        margin-left: 0;
+        width: 100%;
     }
 }
 #Faixas {
@@ -159,14 +181,14 @@ nav a:hover{
     position: absolute;
     width: 100%;
     height: 50px;
-    background-color: #353332da; 
+    background-color: #191E49; 
     top: 5%; /* Ajusta a posição vertical da primeira faixa */
     left: -100%; /* Inicialmente fora da tela, à esquerda */
     animation: moveStripe 10s linear infinite;
   }
   .stripe2 {
     top: 65%; /* Ajusta a posição vertical da segunda faixa */
-    background-color: #d1cccc; /* Cor diferente para a segunda faixa */
+    background-color: #191e4988; /* Cor diferente para a segunda faixa */
     animation-delay: 2.5s; /* Atraso para a segunda faixa começar depois da primeira */
   }
   /* Animação para mover as faixas da esquerda para a direita */
@@ -179,70 +201,111 @@ nav a:hover{
     }
   }
   #Slide {
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 50px;
-    background-color: #353332da;
-    border-radius: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
 }
+
+#ContendSlide {
+    width: 50%;
+}
+#img_slide{
+    width: 50%;
+}#img_slide img {
+    width: 100%;
+}
+
 #Slide p{
     text-align: center;
     font-size: 18px;
     font-family: monospace;
-    color: #B7BCE6;
+    color: #191E49;
+    margin-top: 20px;
 }
 #Slide h2 {
     margin-top: 20px;
     text-align: center;
     font-size: 52px;
     font-family: sans-serif;
-    color: #FCFAFA;
+    color: #191E49;
 }
 #Slide #Sp2 {
     margin-top: 20px;
     text-align: center;
-    color: #FCFAFA;
+    color: #191E49;
 }
-.slideshow {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 600px; /* Ajuste para o tamanho desejado */
-    height: 400px; /* Ajuste para o tamanho desejado */
-    overflow: hidden;
-  }
-  
-  .slide {
-    position: absolute;
-    margin-left: 5%;
-    width: 90%;
-    height: 80%;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
-  @media(max-width: 800px){
-    .slide {
-        height: 60%;
-      }
-  }
-  
-  .active {
-    opacity: 1;
-  }
-
 #TimeMoney {
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     margin-top: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+@media(max-width: 800px){
+    #Slide {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 150px;
+    }
+    #ContendSlide {
+        width: 100%;
+    }
+    
+    #Slide p{
+        text-align: center;
+        font-size: 18px;
+        font-family: monospace;
+        color: #191E49;
+        margin-top: 20px;
+    }
+    #Slide h2 {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 30px;
+        font-family: sans-serif;
+        color: #191E49;
+    }
+    #Slide #Sp2 {
+        margin-top: 20px;
+        text-align: center;
+        color: #191E49;
+    }
+    #img_slide{
+        width: 100%;
+        margin-bottom: 30px;
+    }#img_slide img {
+        width: 100%;
+    }
+    
+    
+}
+
+
+#TimeMoney {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 .ElementTimeMoney{
-    background-color: #fffbfad7;
+    background-color: #6f78ad;
     width: 30%;
     text-align: center;
     border-radius: 10px;
     box-shadow: 5px 3px 30px #191E49;
+    padding: 20px;
 }
 .ElementTimeMoney img {
     margin-top: 20px;
@@ -252,51 +315,43 @@ nav a:hover{
 .TMp1{
     font-size: 28px;
     font-family: sans-serif;
-    color: #191E49;
+    color: #ffffff;
     font-weight: 600;
 }
 .TMp2{
     margin-top: 30px;
     font-size: 20px;
     font-family: sans-serif;
-    color: #191E49;
+    color: #ffffff;
     margin-bottom: 20px;  
 }
-@media(min-width: 1000px){
-    #TimeMoney {
-        margin-top: 350px;
-    }
-}
+
 @media(max-width: 800px){
     #TimeMoney {
-        width: 100%;
-        margin-top: 100px;
+        width: 90%;
+        margin-left: 5%;
         display: flex;
         flex-direction: column;
     }
     .ElementTimeMoney{
         width: 80%;
         margin-left: 10%;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
 }
 #XP {
     margin-top: 150px;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
 }
+
 #XPTXT {
     width: 50%;
-}#XPTXT #XPp1 {
-    font-size: 15px;
-    font-family: monospace;
-    margin-top: 20px;
-    color: #474F7B;
-    margin-bottom: 50px;
 }#XPTXT #XPp2 {
+    padding-top: 50px;
     font-size: 50px;
     font-weight: 600;
     font-family: sans-serif;
@@ -308,10 +363,12 @@ nav a:hover{
     color: #191E49;
 }
 #XPIMG {
-    margin-left: 10%;
+    margin-top: 100px;
+    width: 50%;
 }
 #XPIMG img{ 
-    border-radius: 20px;
+    width: 60%;
+    margin-left: 20%;
 }
 @media(max-width: 800px){
     #XP {
@@ -320,30 +377,39 @@ nav a:hover{
         width: 80%;
         margin-left: 10%;
     }#XPTXT #XPp2 {
-        font-size: 50px;
+        font-size: 30px;
     }#XPIMG {
         margin-top: 30px;
-        margin-left: 0%;
-        width: 100%;
+        margin-left: 10%;
+        width: 80%;
     }#XPIMG img {
         width: 100%;
+        margin-left: 0;
     }
 }
+
+
+
+
 #TheBest {
     margin-top: 150px;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
 }
+#Phone {
+    width: 50%;
+}
 #TheBest #Phone img {
-    border-radius: 20px;
+    margin-top: 100px;
+    width: 50%;
 }
 #TBTXT{
+    width: 50%;
     margin-top: 50px;
-    margin-left: 10%;
 }#TBTXT #TBP1{
-    margin-top: 10px;
+    margin-top: 100px;
     font-size: 15px;
     font-family: monospace;
     color: #474F7B;
@@ -364,17 +430,43 @@ nav a:hover{
 @media(max-width:800px){
     #TheBest {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-bottom: 30px;
     }#TheBest #Phone{
+        margin-top: 20px;
         width: 100%;
     } #TheBest #Phone img{
-        width: 100%;
+        width: 80%;
+        margin-left: 10%;
     } 
+    #TBTXT{
+        width: 100%;
+        margin-top: 50px;
+    }#TBTXT #TBP1{
+        margin-top: 100px;
+        font-size: 15px;
+        font-family: monospace;
+        color: #474F7B;
+    }#TBTXT #TBP2 {
+        margin-top:  30px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: sans-serif;
+        color: #191E49;
+    }#TBTXT #TBP3 {
+        margin-top:  30px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-family: sans-serif;
+        color: #191E49;
+        margin-bottom: 30px;
+    }
 }
 #Amor {
     margin-top: 50px;
-    width: 90%;
-    margin-left: 5%;
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     flex-direction: row;
 }#ATXT {
@@ -401,11 +493,11 @@ nav a:hover{
     color: #191E49;
 }#ATXT #BtnAmor {
     width: 250px;
-    background-color: black;
+    background-color: #191E49;
     font-size: 20px;
     color: white;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 #AImg {
     width: 50%;
@@ -417,6 +509,8 @@ nav a:hover{
 }
 @media(max-width: 800px) {
     #Amor {
+        width: 90%;
+        margin-left: 5%;
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
@@ -424,7 +518,12 @@ nav a:hover{
         margin-left: 5%;
         width: 90%;
     }#AImg {
-        display: none;
+        margin-top: 50px;
+        width: 100%;
+    }#AImg imag {
+        width: 100%;
+    }#ATXT #AP2 {
+        font-size: 30px;
     }
 }
 #Depoimento {
@@ -474,9 +573,9 @@ nav a:hover{
 }#TestContent #buttons button{
     width: 250px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
-    background-color: black;
+    background-color: #191E49;
     font-weight: 600;
 }#TestContent #buttons button:hover {
     opacity: 70%;
@@ -594,52 +693,19 @@ nav a:hover{
   }
   
   footer {
-    background-color: #333;
+    background-color: #191E49;
     color: #fff;
     padding: 20px 0;
     text-align: center;
   }
-  
-  .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  footer a {
+    color: white;
   }
   
-  .footer-section {
-    flex: 1 1 300px; /* Responsivo: define uma largura mínima e flexível */
-    margin: 10px 0;
-  }
-  
-  .footer-section p {
-    margin: 5px 0;
-  }
-  
-  .footer-section a {
-    color: #1da1f2;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .footer-section a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    margin-top: 10px;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #fff;
-  }
-  
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
+    #TestContent h1 {
+        font-size: 30px;
+    }
     .footer-container {
       flex-direction: column;
     }
