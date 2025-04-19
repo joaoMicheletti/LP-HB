@@ -637,6 +637,7 @@ nav a:hover{
     justify-content: space-between;
 }
 #Personalizados div {
+    padding: 20px;
     text-align: center;
     width: 40%;
     margin-left: 5%;
@@ -674,12 +675,12 @@ nav a:hover{
 }
 .BTNA {
     width: 200px;
-    height: 30px;
-    background-color: black;
+    height: 50px;
+    background-color: #191E49;
     color: white;
     font-weight: 600;
     font-family: monospace;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 .BTNA:hover{
