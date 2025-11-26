@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/icon.png" type="image/svg+xml">
     <link rel="stylesheet" href='./style.css'/>
+    <meta property="og:title" content="Flowly - Plataforma de Agendamentos Inteligente" />
+    <meta property="og:description" content="Conheça a plataforma que automatiza sua rotina e aumenta suas vendas." />
+    <meta property="og:image" content="https://flowly.app.br/assets/icon.png" />
+    <meta property="og:url" content="https://flowly.app.br/" />
+    <meta property="og:type" content="website" />
     <title>Flowly</title>    
     <style>
         
@@ -24,6 +29,9 @@ body{
 }
 header{
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -37,10 +45,9 @@ header{
     display: flex;
     flex-direction: row;
 }
-#ContentHeader #ImgHeader{
-    font-size: 55px;
-    margin-left: 100px;
-   color: hsl(0, 0%, 100%); 
+#ContentHeader #ImgHeader img{
+    width: 40px;
+    padding: 5px;
 }
 nav {
     display: flex;
@@ -377,8 +384,8 @@ nav a:hover{
     width: 50%;
 }
 #XPIMG img{ 
-    width: 60%;
-    margin-left: 20%;
+    width: 90%;
+    margin-left: 5%;
 }
 @media(max-width: 800px){
     #XP {
@@ -712,7 +719,25 @@ nav a:hover{
   footer a {
     color: white;
   }
-  
+  #Tour {
+    margin-top: 150px;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center; 
+}
+#Tour h2 {  
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #191E49;
+    margin-bottom: 30px;    
+}
+  #Tour video {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+  }
   @media (max-width: 800px) {
     #TestContent h1 {
         font-size: 30px;
@@ -750,7 +775,7 @@ nav a:hover{
     <header id="Header">
         <div id="ContentHeader">
             <h1>
-                <a id="ImgHeader" href="#">Flowly</a>
+                <a id="ImgHeader" href="#"><img src="./assets/icon.png" alt="logo"/></a>
             </h1>
             <nav>
                 <a href="#Primari">Diferencial</a>
@@ -771,7 +796,7 @@ nav a:hover{
             <button onclick="Link()" id="p3">Experimente agora</button>
         </div>
         <div id="ImgPrimari">
-            <img src="./assets/homepropaganda.png" alt="img"/>
+            <img src="./assets/homepropaganda.webp" alt="img"/>
         </div>
     </section>
     <div id="Faixas">
@@ -841,7 +866,7 @@ nav a:hover{
             </p>
         </div>
         <div id="XPIMG">
-            <img src="assets/clientes.png" alt="img"/>
+            <img src="assets/clientes.webp" alt="img"/>
         </div>
     </div>
     <div id="TheBest">
@@ -912,6 +937,14 @@ nav a:hover{
             </p>
         </div>
     </div>
+    <!-- NOVA SEÇÃO ANTES DO TESTE -->
+    <section id="Tour">
+        <h2>Faça um tour e conheça nossa plataforma</h2>
+        <video controls poster="assets/thumb.webp" >
+            <source  src="./assets/final (1).mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+        </video>
+    </section>
     <div id="Teste">
         <div id="TestContent">
             <br/><br/>
@@ -920,7 +953,7 @@ nav a:hover{
             <p>Assista a um tour em vídeo, agende uma demonstração ou inicie um teste gratuito.</p>
             <br/><br/><div id="buttons">
                 <button onclick="Link()" >Agendar uma demonstrção</button><br/><br/>  
-                <button onclick="Link()" >Experimente agora</button>
+                <button ><a href="https://beautybook-production.up.railway.app/" target="_blank">Experimente agora</a></button>
                 <br/>
                 <br/>
             </div>
