@@ -715,3 +715,128 @@ nav a:hover{
     }
   }
   
+
+  /* CONTAINER GERAL */
+#PlanosContainer {
+    width: 90%;
+    margin: 150px auto 50px auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* TÍTULOS */
+.titulo-planos {
+    font-size: 45px;
+    font-weight: 800;
+    color: #191E49;
+}
+
+.subtitulo-planos {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #474F7B;
+}
+
+.titulo-planos2 {
+    margin-top: 80px;
+    font-size: 35px;
+    color: #191E49;
+    font-weight: 700;
+}
+
+/* GRUPOS DE PLANOS */
+.PlanosGrupo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* CARD DO PLANO */
+.Card {
+    background: #ffffff;
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 25px #00000030;
+    transition: 0.3s ease-in-out;
+}
+
+.Card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 40px #00000050;
+}
+
+/* DESTAQUE ANUAL */
+.Card.destaque {
+    border: 3px solid #191E49;
+}
+
+/* TAG DE DESCONTO */
+.tag-desconto {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #191E49;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* PREÇOS */
+.preco {
+    margin: 20px 0;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #f05a5a;
+    display: block;
+    font-size: 18px;
+}
+
+.preco-novo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #191E49;
+}
+
+/* LISTA DE BENEFÍCIOS */
+.lista-plano {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: start;
+}
+
+.lista-plano li {
+    font-size: 18px;
+    color: #474F7B;
+    margin-bottom: 10px;
+}
+
+/* BOTÃO */
+.BTNA {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #191E49;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+}
+
+.BTNA:hover {
+    opacity: 0.8;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+    .Card {
+        width: 90%;
+    }
+}
